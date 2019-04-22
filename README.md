@@ -69,30 +69,30 @@ public class YoungMan {
 
 `Resource` ，对资源的抽象，它的每个实现类都代表了一种资源的访问策略。
 
-![](images\spring-201805091003.jpg)
+![](\images\spring-201805091003.jpg)
 
 ### 2. ResourceLoader 体系
 
 在`Spring`中，资源的定义与加载是分开的，资源的加载时由 `ResourceLoader` 来进行统一资源加载。
 
-![](images\1555925618977.png)
+![](\images\1555925618977.png)
 
 ### 3. BeanFactory 体系
 
 `BeanFactory` 是一个非常纯粹的容器，它是 `IOC` 必备的数据结构，其中 `BeanDefinition` 是它的基本结构，内部维护这一个 `BeanDefinition map` ，可根据 `BeanDefinition` 的描述进行对 `Bean` 的创建和管理。
 
-![](images\1555925845977.png)
+![](\images\1555925845977.png)
 
 ### 4. BeanDefinitionReader 体系
 
 `BeanDefinitionReader` 的作用是读取 `Spring` 的配置文件，并将其转换成 `IOC` 容器内部的数据结构。
 
-![](images\1555925969406.png)
+![](\images\1555925969406.png)
 
 ### 5. ApplicationContext 体系
 
 这个就是 `Spring`容器，称为应用上下文。
 
-![](images\1555926064339.png)
+![](\images\1555926064339.png)
 
 上面的五个体系是 `Spring IOC` 中最核心的部分，啃源码就针对这些部分去深究原理。这此先对大体有个了解，做个思想准备，迎接 `Spring` 的洗礼吧。
