@@ -69,7 +69,7 @@ public class YoungMan {
 
 `Resource` ，对资源的抽象，它的每个实现类都代表了一种资源的访问策略。
 
-![](C:\Users\jonas\Desktop\spring-201805091003.jpg)
+![](images/spring-201805091003.jpg)
 
 ### 2. ResourceLoader 体系
 
