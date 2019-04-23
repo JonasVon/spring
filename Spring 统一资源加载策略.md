@@ -50,7 +50,7 @@ public interface Resource extends InputStreamSource {
 
 第一次打开这个接口阅读的时候真的挺兴奋的，因为这里面的绝大部分方法都是见名知意的，咱们也不难理解。再来看看相关的类结构图：
 
-![](C:\Users\jonas\Desktop\spring\images\spring-201805091003.jpg)
+![](/images/spring-201805091003.jpg)
 
 从上图可以看出，`AbstractResource` 为统一的默认实现类，然后根据不同类型提供不同的具体实现：
 
@@ -204,7 +204,7 @@ public interface ResourceLoader {
 
 作为统一的资源加载器，它提供了统一的抽象，具体的类结构如下：
 
-![](C:\Users\jonas\Desktop\spring\images\spring-201805091004.png)
+![](/images/spring-201805091004.png)
 
 #### 1. DefaultResourceLoader
 
@@ -381,7 +381,7 @@ public Resource[] getResources(String locationPattern) throws IOException {
 
 `getResource()` 方法直接委托给相应的 `ResourceLoader` 来实现，所以如果我们在实例化的 `PathMatchingResourcePatternResolver` 的时候，如果没有指定 `ResourceLoader`，那么在加载资源时，其实就是 `DefaultResourceLoader` 的过程。`getResources(String locationPattern)` 也相同，只不过返回多个资源而已。处理逻辑图：
 
-![](C:\Users\jonas\Desktop\spring\images\spring-87106504.jpg)
+![](/images/spring-87106504.jpg)
 
 由上图可见，当 `locationPattern` 以 `classpath*:` 开头但是不包含通配符，则调用 `findAllClassPathResource()` 方法加载资源。该方法返回 `classes` 路径下和所有 `jar` 包中的所有相匹配的资源。
 
